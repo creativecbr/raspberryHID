@@ -35,6 +35,8 @@ sudo ./autoconfig.sh
 
 Now you can connect your device to Raspberry and start simulating!
 
+</br>
+
 ## Controller API
 
 Controller.py is a class in **Python3** with methods that enable you to simple use a raspberry hid interface.
@@ -90,6 +92,8 @@ Clicking mouse left button for x times in actual position. </br>
 click(int x)
 ```
 
+</br>
+
 ### Keyboard
 
 
@@ -131,6 +135,7 @@ That function also can write small alphabet characters, numbers, and the like, b
 write(string char, int amount, int faster)
 ```
 
+</br>
 
 ### Tools and Setters
 
@@ -160,6 +165,7 @@ Setting fast delay for clicking and writing. Starting is 0.1 of second.</br>
 ```
 setFastDelay(double newDelay)
 ```
+
 </br>
 
 ## Documentation 
