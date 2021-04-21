@@ -33,14 +33,7 @@ cd autoconfig
 sudo ./autoconfig.sh
 ```
 
-
 Now you can connect your device to Raspberry and start simulating!
-
-</br>
-
-___
-
-</br>
 
 ## Controller API
 
@@ -53,7 +46,6 @@ Controller support moving and clicking mouse, writing special keys and writing t
 
 ### Mouse
 
-</br>
 
 Moving mouse cursor by x pixels to **RIGHT**. </br>
 **Params:**</br>
@@ -98,15 +90,8 @@ Clicking mouse left button for x times in actual position. </br>
 click(int x)
 ```
 
-</br>
-
-___
-
-</br>
-
 ### Keyboard
 
-</br>
 
 Using Win Key in combination with any character, it can be usefull when we want call special windows.</br>
 **Params:**</br>
@@ -145,15 +130,9 @@ That function also can write small alphabet characters, numbers, and the like, b
 ``` 
 write(string char, int amount, int faster)
 ```
-</br>
 
-___
-
-</br>
 
 ### Tools and Setters
-
-</br>
 
 Stops main thread of program with logging on every second.
 If second parameter is greater than 10, the method will be print log once for 5 seconds. </br>
@@ -173,7 +152,6 @@ Setting default delay for clicking and writing. Starting is 0.5 of second.</br>
 setDefaultDelay(double newDelay)
 ```
 
-
 </br>
 
 Setting fast delay for clicking and writing. Starting is 0.1 of second.</br>
@@ -182,7 +160,17 @@ Setting fast delay for clicking and writing. Starting is 0.1 of second.</br>
 ```
 setFastDelay(double newDelay)
 ```
+</br>
 
+## Documentation 
+
+- [Unibersal Serial Bus HID Usage Table](https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf)
+- [Composite USB gadget configs](https://wiki.tizen.org/USB/Linux_USB_Layers/Configfs_Composite_Gadget/Usage_eq._to_g_hid.ko)
+- [USB gadget configs](https://www.kernel.org/doc/Documentation/usb/gadget_configfs.txt)
+- [USB gadget configs testing](https://www.kernel.org/doc/Documentation/ABI/testing/configfs-usb-gadget)
+- [Serial driver](https://www.kernel.org/doc/Documentation/usb/gadget_serial.txt)
+- [Raspberry documentation](https://www.raspberrypi.org/documentation/)
+- [isticktoit tutorial](https://www.isticktoit.net/?p=1383)
 
 
 
