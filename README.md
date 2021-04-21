@@ -1,6 +1,6 @@
 # Raspberry as HID device
 
-Autoconfiguration script and simple python controller for emulating mouse/keyboard inputs.
+Autoconfiguration bash script to set appropriate hid drivers and simple python controller for emulating mouse/keyboard inputs.
 
 </br>
 
