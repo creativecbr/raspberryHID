@@ -19,7 +19,7 @@ Autoconfiguration bash script to set appropriate hid drivers and simple python c
 
 Simple instructions to config raspberry as HID device by setting libcomposite and upload appropriate drivers.
 
-- Clone this repository to your raspberry.
+- Clone this repository on your raspberry.
 - Extract *auto.tar.gz* with autoconfiguration script.
 ```
 tar -xzvf auto.tar.gz 
