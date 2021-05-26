@@ -237,13 +237,13 @@ class Controller(object):
         time.sleep(self.FAST_DELAY)
         self._mouse(b'\x00\x00\x00')
     
-    def move_up(self, x):
+    def move_down(self, x):
         for i in list(range(x)):
             self._mouse(b'\x00\x00\x01')            
         time.sleep(self.FAST_DELAY)
         self._mouse(b'\x00\x00\x00')
     
-    def move_down(self, x):
+    def move_up(self, x):
         for i in list(range(x)):
             self._mouse(b'\x00\x00\xfe')            
         time.sleep(self.FAST_DELAY)
@@ -274,9 +274,14 @@ class Controller(object):
             self._write_report(self.NULL_CHAR*8)
             time.sleep(self.DELAY)
 
+    def unlock(self, number_of_clicks):        
+        for i in list(range(number_of_clicks)):
+            self.write(self.ESCAPE, 1, 0)
+            self.sleep("Unlock " + str(i+1) +" of " + str(number_of_clicks), 3)
+        
     def write_char(self, char, amount, faster):
         if faster == 1:
-            self._changeDelay()
+             self._changeDelay()
         type = self._getChar(char)        
         type = type[0:5]
         if type == "shift":
@@ -318,11 +323,16 @@ class Controller(object):
 
 #c = Controller()
 
-#c.move_up(50)
+
+
+#c.write_char(c.TAB, 5, 0)
+
+#c.move_up(100)
 #c.move_right(50)
 #c.move_down(50)
 #c.move_left(50)
 #c.click(5)
+
 
 
 #c.write_win_with_char(c.n)
