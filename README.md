@@ -6,7 +6,7 @@ Autoconfiguration bash script to set appropriate hid drivers and simple python c
 
 > Works on: **Raspberry Pi OS 2021-03-04**.
 >
-> Author: **Pawel Lesniewski**.
+> Author: **FAMOC - by Pawel Lesniewski**.
 >
 > Supported OS: **Windows, Linux, Android**.
 >
@@ -49,50 +49,59 @@ Controller support moving and clicking the mouse, writing special keys, and writ
 ### Mouse
 
 
-Moving mouse cursor by x pixels to **RIGHT**. </br>
-**Params:**</br>
+Moving mouse cursor by x pixels to **RIGHT**. <br>
+**Params:**<br>
 *x* - number of pixels to move.
 ``` 
 move_right(int x)
 ```
 
-</br>
+<br>
 
-Moving mouse cursor by x pixels to **LEFT**. </br>
-**Params:**</br>
+Moving mouse cursor by x pixels to **LEFT**. <br>
+**Params:**<br>
 *x* - number of pixels to move.
 ``` 
 move_left(int x)
 ```
 
-</br>
+<br>
 
-Moving mouse cursor by x pixels to **UP**. </br>
-**Params:**</br>
+Moving mouse cursor by x pixels to **UP**. <br>
+**Params:**<br>
 *x* - number of pixels to move.
 ``` 
 move_up(int x)
 ```
 
-</br>
+<br>
 
-Moving mouse cursor by x pixels to **DOWN**. </br>
-**Params:**</br>
+Moving mouse cursor by x pixels to **DOWN**. <br>
+**Params:**<br>
 *x* - number of pixels to move.
 ``` 
 move_down(int x)
 ```
 
-</br>
+<br>
 
-Clicking mouse left button for x times in actual position. </br>
-**Params:**</br>
+Swipe mouse (keeps mouse button pressed and then moves) to **UP** by x pixels. <br>
+**Params:**<br>
+*x* - number of pixels to swipe.
+``` 
+swipe_up(int x)
+```
+
+<br>
+
+Clicking mouse left button for x times in actual position. <br>
+**Params:**<br>
 *x* - how many times mouse should click.
 ``` 
 click(int x)
 ```
 
-</br>
+<br>
 
 ### Keyboard
 

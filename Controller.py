@@ -5,7 +5,7 @@
 #
 # Author: Lesniewski Pawel
 # Supported OS: Windows, Linux, Android
-# Version 1.0.0
+# Version 1.0.1
 
 import time
 
@@ -255,6 +255,12 @@ class Controller(object):
             time.sleep(self.FAST_DELAY)
             self._mouse(b'\x00\x00\x00')
             time.sleep(self.FAST_DELAY)
+
+    def swipe_up(self, y):
+        for i in list(range(y)):
+            self._mouse(b'\x01\x00\xfe')
+        time.sleep(self.FAST_DELAY)
+        self._mouse(b'\x00\x00\x00')
             
     def write_win_with_char(self, char):
         self._write_report(chr(8) + self.NULL_CHAR*7)
@@ -322,7 +328,7 @@ class Controller(object):
 # Uncomment to test.
 
 #c = Controller()
-
+#c.swipe_up(200)
 
 
 #c.write_char(c.TAB, 5, 0)
@@ -332,6 +338,14 @@ class Controller(object):
 #c.move_down(50)
 #c.move_left(50)
 #c.click(5)
+
+#c.unlock(2)
+#c.write(c.TAB, 1, 0)
+#c.write(c.ENTER, 1, 0)
+#c.sleep("xd", 2)
+
+#c.write(c.TAB, 3, 0)
+#c.write(c.ENTER, 1, 0)
 
 
 
